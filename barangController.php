@@ -8,6 +8,12 @@ class barangController extends Controller
 {
     public function index() 
 	{ 
-	return 'Mengakses Fungsi di Controller menggunakan route'; 
+	$barang = 'Aqua 400ML'; 
+	return view('barang/index',compact('barang')); 
 	}
+	
+	public function show() 
+	{ 
+	$barang = ['Aqua 115 ML','Minuman Bersoda','Buku Sejarah','Mouse','CPU']; 
+	return view('barang/show',compact('barang')); }
 }

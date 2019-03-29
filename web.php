@@ -46,4 +46,11 @@ Route::get('/create', function () {
  
  Route::get('/barang', 'barangController@index'); 
  
+ Route::get('/barang/show','barangController@show'); 
+
+ Route::get('/halaman',function(){ 
+	$title = 'Harry Pooter'; 
+	$konten = 'harry potter and the deathly hallows: part 2'; 
+	return view('konten.halaman',compact('title','konten')); 
+});
  
